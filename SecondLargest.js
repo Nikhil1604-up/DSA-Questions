@@ -12,9 +12,11 @@
 // Output: -1
 // Explanation: The largest element of the array is 10 there is no second largest element.
 
+// Double pass technique
+
 const arr = [12, 35, 1, 10, 34, 1];
 
-const getSecondLargest = (arr) => {
+const getSecondLargest = () => {
   let largest = -1;
   let secondLargetst = -1;
 
@@ -28,6 +30,25 @@ const getSecondLargest = (arr) => {
   return secondLargetst;
 };
 
-const result = getSecondLargest(arr);
+const result = getSecondLargest();
 
-console.log("result", result);
+// Single pass technique
+
+const getSecondLargestSinglePass = () => {
+  let largest = -1;
+  let secondLargest = -1;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > largest) {
+      secondLargest = largest;
+      largest = arr[i];
+    } else if (arr[i] < largest && arr[i] > secondLargest) {
+      secondLargest = arr[i];
+    }
+  }
+  return secondLargest;
+};
+
+const singlePassResult = getSecondLargestSinglePass();
+
+console.log("result", singlePassResult);
