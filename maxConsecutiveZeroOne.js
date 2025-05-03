@@ -12,8 +12,6 @@
 // Output: 4
 // Explanation: The maximum number of consecutive 0’s in the array is 4.
 
-// kiran
-
 const arr = [1, 1, 0, 0, 1, 0, 1, 0, 1, 1, 1, 1];
 
 const getMaxConsecutiveCount = () => {
