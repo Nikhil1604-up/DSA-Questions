@@ -32,4 +32,3 @@ const moveZeroesToEnd = () => {
 };
 
 const result = moveZeroesToEnd();
-console.log("result", result);
